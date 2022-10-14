@@ -32,6 +32,17 @@ int main()
 int main()
 {
     for(int i=1;i<=5;i++){
+        int star=i*2-1;///有幾個星星
+        printf("鷹架:%d樓 %d星\n",i,star);
+}
+```
+## step01-2
+2層迴圈-更多種畫星星
+```cpp
+#include <stdio.h>
+int main()
+{
+    for(int i=1;i<=5;i++){
         int space=5-i;///有幾個空格
         int star=i*2-1;///有幾個星星
         for(int k=0;k<space;k++){
@@ -44,7 +55,7 @@ int main()
     }
 }
 ```
-## step01-2
+## step01-3
 最大公因數-暴力迴圈法
 ```cpp
 #include <stdio.h>
@@ -59,7 +70,7 @@ int main()
     printf("找到ans:%d",ans);
 }
 ```
-## step01-3
+## step01-4
 最大公因數-輾轉相除法
 ```cpp
 #include <stdio.h>
@@ -78,7 +89,7 @@ int main()
     printf("中的是:%d",b);
 }
 ```
-## step01-4
+## step01-5
 解釋while迴圈
 ```cpp
 #include <stdio.h>
