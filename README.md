@@ -109,3 +109,49 @@ int main()
     if("a==0")printf("不管什麼東西,幾乎都成立\n");
 }
 ```
+#week07
+## step01-0 
+考試: 畫星星(金字塔) (考前有無練習)
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+	int space = n-i;
+	int star = i*2-1;
+	for(int k=0;k<space;k++)printf(" ");
+	for(int k=0;k<star;k++)printf("*");
+	printf("\n");
+	}
+}
+```
+
+## step01-1 
+主題: 各種型別 long long int,
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=1234567812345678;
+    printf("%d\n",n);///出事了
+    long long int a=1234567812345678;
+    printf("%lld\n",a);///不是數字11是英文小寫ll
+}
+```
+
+## step01-2 
+主題: 複習最大公因數
+```cpp
+```
+
+## step01-3 
+主題: 十進位轉2進位(剝皮法)
+```cpp
+```
+
+## step01-4 
+主題: 用 GitHub 做出自己的網站
+```cpp
+```
