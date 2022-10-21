@@ -36,7 +36,7 @@ int main()
         printf("鷹架:%d樓 %d星\n",i,star);
 }
 ```
-## step02-2
+## step01-2
 2層迴圈-更多種畫星星
 ```cpp
 #include <stdio.h>
@@ -55,7 +55,7 @@ int main()
     }
 }
 ```
-## step02-3
+## step01-3
 最大公因數-暴力迴圈法
 ```cpp
 #include <stdio.h>
@@ -110,7 +110,7 @@ int main()
 }
 ```
 #week07
-## step01-0 
+## step02-0 
 考試: 畫星星(金字塔) (考前有無練習)
 ```cpp
 #include <stdio.h>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-## step01-1 
+## step02-1 
 主題: 各種型別 long long int,
 ```cpp
 #include <stdio.h>
@@ -141,7 +141,7 @@ int main()
 }
 ```
 
-## step01-2 
+## step02-2 
 主題: 複習最大公因數
 ```cpp
 #include <stdio.h>
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## step01-3 
+## step02-3 
 主題: 複習最大公因數(輾轉相除法)
 ```cpp
 #include <stdio.h>
@@ -175,7 +175,7 @@ int main()
     printf("答案是:%lld\n",b);
 }
 ```
-## step01-4 
+## step02-4 
 主題: 十進位轉2進位(剝皮法)
 ```cpp
 #include <stdio.h>
