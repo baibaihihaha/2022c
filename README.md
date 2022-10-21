@@ -36,7 +36,7 @@ int main()
         printf("鷹架:%d樓 %d星\n",i,star);
 }
 ```
-## step01-2
+## step02-2
 2層迴圈-更多種畫星星
 ```cpp
 #include <stdio.h>
@@ -55,7 +55,7 @@ int main()
     }
 }
 ```
-## step01-3
+## step02-3
 最大公因數-暴力迴圈法
 ```cpp
 #include <stdio.h>
@@ -144,14 +144,46 @@ int main()
 ## step01-2 
 主題: 複習最大公因數
 ```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b; ///很長很長的整數a,b
+    scanf("%lld%lld",&a,&b);
+    long long int ans;
+    for(long long int i=1;i<=a;i++){ ///好慢喔!!!
+        if(a%i==0&&b%i==0)ans=i;
+    }
+    printf("答案是:%lld\n",ans);
+}
 ```
 
 ## step01-3 
+主題: 複習最大公因數(輾轉相除法)
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b,c;
+    scanf("%lld%lld",&a,&b);
+    while(1){
+        c=a%b;
+        printf("%lld%lld%lld\n",a,b,c);
+        if(c==0)break;
+        a=b;
+        b=c;
+    }
+    printf("答案是:%lld\n",b);
+}
+```
+## step01-4 
 主題: 十進位轉2進位(剝皮法)
 ```cpp
-```
-
-## step01-4 
-主題: 用 GitHub 做出自己的網站
-```cpp
-```
+#include <stdio.h>
+int main()
+{
+    int n=1234566789;
+    while(n>0){
+        printf("個位數是:%d\n", n%10);
+        n=n/10;
+    }
+}
