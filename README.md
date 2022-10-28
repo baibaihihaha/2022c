@@ -127,7 +127,6 @@ int main()
 	}
 }
 ```
-
 ## step02-1 
 主題: 各種型別 long long int,
 ```cpp
@@ -140,7 +139,6 @@ int main()
     printf("%lld\n",a);///不是數字11是英文小寫ll
 }
 ```
-
 ## step02-2 
 主題: 複習最大公因數
 ```cpp
@@ -156,7 +154,6 @@ int main()
     printf("答案是:%lld\n",ans);
 }
 ```
-
 ## step02-3 
 主題: 複習最大公因數(輾轉相除法)
 ```cpp
@@ -187,3 +184,114 @@ int main()
         n=n/10;
     }
 }
+```
+
+#week08
+## step03-0
+考試: 最大公因數-輾轉相除
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	scanf("%d%d",&a,&b);
+	while(1){
+		c=a%b;
+		if(c==0)break;
+		a=b;
+		b=c;
+	}
+	printf("%d",b);
+}
+```
+## step03-1
+主題: 質數判別
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("要判斷你輸入的數字是不是很孤獨的質數:");
+    int n;
+    scanf("%d",&n);
+    int bad=0;
+    for(int i=2;i<n;i++){
+        if(n%i==0)bad=1;
+    }
+    if(bad==0)printf("%d 是質數(沒有壞掉)",n);
+    else printf("%d 不是質數(早就壞掉了)",n);
+}
+```
+## step03-2
+主題: 很多質數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int n=2;n<=a;n++){
+        int bad=0;
+        for(int i=2;i<n;i++){
+            if(n%i==0)bad=1;
+        }
+        if(bad==0)printf("%d",n);
+    }
+}
+
+```
+## step03-3.1
+主題: 實習講解、練習
+[for2] 以*輸出直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+		for(int k=1;k<=n;k++){
+			if(k<=n-i)printf(" ");
+			else printf("*");
+		}
+		printf("\n");
+	}
+}
+```
+## step03-3.2
+主題: 實習講解、練習
+[while2] 以*輸出直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int i=1;
+	while(i<=n){
+		int k=1;
+		while(k<=n){
+			if(k<=n-i)printf(" ");
+			else printf("*");
+			k++;
+		}
+		printf("\n");
+		i++;
+	}
+}
+
+```
+## step03-3.3
+主題: 實習講解、練習
+找出所有的因數
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<n;i++){
+		if(n%i==0)printf("%d,",i);
+	}
+	printf("%d",n);
+}
+```
