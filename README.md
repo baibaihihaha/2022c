@@ -295,3 +295,66 @@ int main()
 	printf("%d",n);
 }
 ```
+#week10
+## step04-0 
+考試: 列出質數
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	for(int n=2;n<=a;n++){
+		int bad=0;
+		for(int i=2;i<n;i++){
+			if(n%i==0)bad=1;
+		}
+		if(bad==0)printf("%d ",n);
+	}
+}
+```
+## step04-1 
+主題: 陣列
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[4] = {10,20,30,40};
+    printf("a[0]:%d\n",a[0]);
+    printf("a[1]:%d\n",a[1]);
+    printf("a[2]:%d\n",a[2]);
+    printf("a[3]:%d\n",a[3]);
+}
+
+```
+## step04-2 
+主題: 陣列+迴圈
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[4] = {10,20,30,40};
+    for(int i=0;i<4;i++){
+        printf("a[%d]:%d\n",i,a[i]);
+    }
+    for(int i=3;i>=0;i--){
+        printf("%d ",a[i]);
+    }
+}
+```
+#week11
+## step05-0 
+考試:  百數反印
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[100];
+	for(int i=0;i<100;i++){
+		scanf("%d",&a[i]);
+	}
+	for(int i=99;i>=0;i--){
+		printf("%d\n",a[i]);
+	}
+}
+```
