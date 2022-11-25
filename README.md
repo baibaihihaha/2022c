@@ -424,21 +424,145 @@ printf("\n");
 主題: 百數排序
 ```cpp
 #include <stdio.h>
-int a[10]={90,80,70,60,50,40,30,20,10,0};
+int a[100];
 int main()
 {
-    for(int i=0;i<10;i++)printf("%d ",a[i]);
+    for(int i=0;i<100;i++)printf("%d ",a[i]);
     printf("\n");
-    for(int k=0;k<10-1;k++){
-        for(int i=0;i<10-1;i++){
+    for(int k=0;k<100-1;k++){
+        for(int i=0;i<100-1;i++){
             if(a[i]>a[i+1]){
                 int temp=a[i];
                 a[i]=a[i+1];
                 a[i+1]=temp;
             }
         }
-        for(int i=0;i<10;i++)printf("%d ",a[i]);
+        for(int i=0;i<100;i++)printf("%d ",a[i]);
         printf("\n");
     }
+}
+```
+## step06-0
+考試: 百數排序-泡泡排序法
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[100];
+	for(int i=0;i<100;i++){
+	scanf("%d",&a[i]);
+	}
+	for(int k=0;k<100;k++){
+		for(int i=0;i<100-1;i++){
+			if(a[i]>a[i+1]){
+			int temp = a[i];
+			a[i] = a[i+1];
+			a[i+1] = temp;
+			}
+		}
+	}
+	for(int i=0;i<100;i++){
+		printf("%d\n",a[i]);
+	}
+}
+```
+## step06-1
+主題: 排序-選擇排序法
+```cpp
+#include <stdio.h>
+int a[5] = {5,4,3,2,1};
+int main()
+{
+    for(int i=0;i<5;i++){
+        for(int j=i+1;j<5;j++){
+            if(a[i]>a[j]){
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    for(int i=0;i<5;i++)printf("%d ",a[i]);
+}
+```
+## step06-2
+主題: 二維陣列
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[2][3]={{10,20,30},{40,50,60}};
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
+## step06-3
+主題: 矩陣加法
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[10][10],b[10][10],c[10][10];
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			scanf("%d",&b[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			c[i][j]=a[i][j]+b[i][j];
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			printf("%3d",c[i][j]);
+		}
+		printf("\n");
+	}
+}
+```
+## step06-4
+主題: 矩陣乘法
+```cpp
+int main()
+{
+	int a[10][10],b[10][10],c[10][10];
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			scanf("%d",&b[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			c[i][j]=0;//a[i][j]+b[i][j];
+			for(int k=0;k<n;k++){
+				c[i][j] += a[i][k]*b[k][j];
+			}
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			printf("%3d ",c[i][j]);
+		}
+		printf("\n");
+	}	
 }
 ```
