@@ -566,3 +566,112 @@ int main()
 	}	
 }
 ```
+## step07-0
+考試: 矩陣加法
+```cpp
+#include <stdio.h>
+int a[10][10],b[10][10];
+int main()
+{
+	int n,m;
+	scanf("%d%d",&n,&m);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			scanf("%d",&b[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			printf("%d ",a[i][j]+b[i][j]);
+		}
+		printf("\n");
+	}
+}
+```
+## step07-1
+主題: 左手i 右手j(選擇排序、最佳買賣點、2D陣列)
+```cpp
+#include <stdio.h>
+int a[100];
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int left,right;
+    int ans = -99999999;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[j]-a[i]>ans){
+                ans = a[j] - a[i];
+                left = a[i];
+                right = a[j];
+            }
+        }
+    }
+    printf("請按任意鍵繼續...\n");
+    printf("最大利潤=%d-%d=%d\n",right,left,ans);
+}
+```
+## step07-2
+主題: A4白紙/黃金比例/Fibonacci數列
+```cpp
+#include <stdio.h>
+int a[50];
+int main()
+{
+    a[0]=0;
+    a[1]=1;
+    ///數學歸納法，a[0]a[1]要先有，才能自動繼續
+    for(int i=2;i<45;i++){
+        a[i]=a[i-1]+a[i-2];
+    }
+    for(int i=0;i<45;i++){
+        printf("%d ",a[i]);
+    }
+}
+```
+## step07-3
+主題: [array]-矩陣轉180
+```cpp
+#include <stdio.h>
+int a[200][200];
+int main()
+{
+	int n,m;
+	scanf("%d%d",&n,&m);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("\n");
+	for(int i=n-1;i>=0;i--){
+		for(int j=m-1;j>=0;j--){
+			printf("%2d ",a[i][j]);
+		}
+		printf("\n");
+	}
+}
+```
+## step07-4
+主題: Function 函式/函數
+```cpp
+#include <stdio.h>
+int addnum(int a,int b)
+{
+    return a+b;
+}
+int main()
+{
+    int ans = addnum(2,3);
+    printf("addnum(2,3)會得到 %d\n",ans);
+}
+```
