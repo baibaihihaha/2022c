@@ -442,6 +442,7 @@ int main()
     }
 }
 ```
+#week12
 ## step06-0
 考試: 百數排序-泡泡排序法
 ```cpp
@@ -566,6 +567,7 @@ int main()
 	}	
 }
 ```
+#week13
 ## step07-0
 考試: 矩陣加法
 ```cpp
@@ -674,4 +676,39 @@ int main()
     int ans = addnum(2,3);
     printf("addnum(2,3)會得到 %d\n",ans);
 }
+```
+#week14
+## step08-0
+考試: Fibonacci費氏數列
+```cpp
+#include <stdio.h>
+int a[50];
+int main()
+{
+	a[0]=1;
+	a[1]=1;
+	int n;
+	scanf("%d",&n);
+	for(int i=2;i<n;i++){
+		a[i]=a[i-1]+a[i-2];
+	}
+	for(int i=0;i<n;i++){
+		printf("%d ",a[i]);
+	}
+}
+```
+## step08-1主題: 函式(宣告/定義、使用呼叫、回傳/參數、變數範圍)
+```cpp
+```
+## step08-2
+主題: 函式呼叫函式
+```cpp
+```
+## step08-3
+主題: 最大公因數的函式解法
+```cpp
+```
+## step08-4
+主題: 
+```cpp
 ```
