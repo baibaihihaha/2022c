@@ -697,16 +697,85 @@ int main()
 	}
 }
 ```
-## step08-1主題: 函式(宣告/定義、使用呼叫、回傳/參數、變數範圍)
+## step08-1.1
+主題: 函式(宣告/定義、使用呼叫、回傳/參數、變數範圍)
 ```cpp
+#include <stdio.h>
+int a=10;
+void func()
+{
+    a=30;
+    printf("func()中a改成:%d\n",a);
+}
+int main()
+{
+    printf("main()中a是:%d\n",a);
+    func();
+    printf("main()中a是:%d\n",a);
+}
+```
+## step08-1.2
+主題: 函式(宣告/定義、使用呼叫、回傳/參數、變數範圍)
+```cpp
+#include <stdio.h>
+int a=10;
+void func()
+{
+    a=20;
+    printf("func()中a是:%d\n",a);
+    a=30;
+    printf("func()中a改成:%d\n",a);
+}
+int main()
+{
+    printf("main()中a是:%d\n",a);
+    func();
+    printf("main()中a是:%d\n",a);
+}
 ```
 ## step08-2
 主題: 函式呼叫函式
 ```cpp
+#include <stdio.h>
+int n=30;
+int funcA(int a,int b)
+{
+    printf("funcA()的a,b是:%d %d\n",a,b);
+    return a + b;
+}
+int funcB(int n)
+{
+    printf("funcB()的 n 是:%d\n",n);
+    int ans=funcA(n,n);
+    return ans;
+}
+int main()
+{
+    int a=10,b=20;
+    funcB(b);
+    funcA(a,b);
+    printf("main()的a,b是:%d %d\n",a,b);
+}
 ```
 ## step08-3
 主題: 最大公因數的函式解法
 ```cpp
+#include <stdio.h>
+int gcd(int a,int b)
+{
+    if(a==0)return b;
+    if(b==0)return a;
+
+    return gcd(b,a%b);
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+
+    int ans = gcd(a,b);
+    printf("%d",ans);
+}
 ```
 ## step08-4
 主題: 
