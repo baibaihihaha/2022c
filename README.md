@@ -777,7 +777,34 @@ int main()
     printf("%d",ans);
 }
 ```
-## step08-4
-主題: 
+## step09-0
+考試: gcd函式
+```cpp
+#include <stdio.h>
+int gcd(int a, int b)
+{
+	if(a==0)return b;
+	if(b==0)return a;
+	
+	return gcd(b,a%b);
+}
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	int ans=gcd(a,b);
+	printf("%d",ans);
+}
+```
+## step09-1
+主題: 字串 vs. 陣列
+```cpp
+```
+## step09-2
+主題: 字串函式
+```cpp
+```
+## step09-3
+主題: 標準 I/O 函式
 ```cpp
 ```
