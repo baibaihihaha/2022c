@@ -796,8 +796,8 @@ int main()
 	printf("%d",ans);
 }
 ```
-## step09-1
-主題: 字串 vs. 陣列
+## step09-1.1
+主題: 字串 vs. 陣列(字串)
 ```cpp
 #include <stdio.h>
 int main()
@@ -808,6 +808,44 @@ int main()
     printf("整數 %d\n",100);
     printf("浮點數 %f\n",3.141592653589793238462643383279);
     printf("%s 字串\n",line);
+}
+```
+## step09-1.2
+主題: 字串 vs. 陣列(字串)
+```cpp
+///ASCII 32+32=64 A:65 32+32+32=96 a:97
+#include <stdio.h>
+int main()
+{
+    printf("%c : %d\n", 65, 65);
+    printf("%c : %d\n", 66, 66);
+    printf("%c : %d\n", 67, 67);
+    printf("%c : %d\n", 'A', 'A');
+    printf("%c : %d\n", 'B', 'B');
+    printf("%c : %d\n", 'C', 'C');
+    printf("上面用的數字 64 及單引號 'a' 的結果都一樣\n");
+    printf("%c : %d\n", 97, 97);
+    printf("%c : %d\n", 'a', 'a');
+}
+```
+## step09-1.3
+主題: 字串 vs. 陣列(陣列)
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("=%c=%d=\n",65,65);
+    printf("=%c=%d=\n",'+','+');
+    printf("=%c=%d=\n",'\n','\n');
+    printf("=%c=%d=\n",'\t','\t');
+    printf("=%c=%d=\n",'\0','\0');
+
+    char line[]="Hello World";
+    for(int i=0;i<30;i++){
+        char c=line[i];
+        if(c==0)break; ///如果遇到字串結尾的0就結束
+        printf("=%c",c);
+    }
 }
 ```
 ## step09-2
