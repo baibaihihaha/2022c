@@ -851,6 +851,22 @@ int main()
 ## step09-2
 主題: 字串函式
 ```cpp
+#include <stdio.h>
+char line[3000];
+int main()
+{
+    printf("請輸入一堆字母,不要有空格喔: ");
+
+    scanf("%s",line);
+   /// printf("%s",line);
+    int N=0;
+    for(int i=0;line[i]!=0;i++){
+        N++;
+    }
+    for(int i=N-1;i>=0;i--){
+        printf("%c",line[i]);
+    }
+}
 ```
 ## step09-3
 主題: 標準 I/O 函式
