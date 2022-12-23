@@ -871,6 +871,17 @@ int main()
 ## step10-1
 主題: scanf()的細節
 ```cpp
+#include <stdio.h>
+int main() {
+	char line[300];
+	char *p = line;
+	int n=10;
+	int *p2 = &n;
+	float f=3.1415926;
+	float *p3 = &f;
+	char c='A';
+	char *p4 = &c;
+}
 ```
 ## step10-2
 主題: 位置、指標
